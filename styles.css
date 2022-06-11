@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section-clock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  column-gap: 3.2rem;
+  row-gap: 9.6rem;
+  text-align: center;
+  padding: 0 4.8rem;
+}
+
+.clock-heading {
+  grid-column: 1/-1;
+}
+
+.clock-tokyo,
+.clock-new-york,
+.clock-dubai {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  background: linear-gradient(45deg, cadetblue, blueviolet);
+  position: relative;
+}
+
+.clock::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 90%;
+  background-color: aliceblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.city-heading {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: 0%;
+  border-radius: 3px;
+  transition: all 0.1s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hour-hand {
+  width: 33%;
+  height: 1.8rem;
+  background-color: cadetblue;
+  z-index: 1;
+}
+
+.minute-hand {
+  width: 40%;
+  height: 1.2rem;
+  background-color: blueviolet;
+  z-index: 2;
+}
+
+.second-hand {
+  width: 40%;
+  height: 0.6rem;
+  background-color: black;
+  z-index: 3;
+}
