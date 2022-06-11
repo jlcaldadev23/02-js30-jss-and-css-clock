@@ -12,8 +12,15 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.clock-heading {
+  font-size: 6.4rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
 .section-clock {
   display: grid;
+  height: 100vh;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
@@ -21,6 +28,9 @@ body {
   row-gap: 9.6rem;
   text-align: center;
   padding: 0 4.8rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(siddharth-shah-EXZipTH58ms-unsplash.jpg);
+  background-size: cover;
 }
 
 .clock-heading {
@@ -61,6 +71,7 @@ body {
   font-size: 3.2rem;
   text-transform: uppercase;
   margin-bottom: 2.4rem;
+  color: #fff;
 }
 
 .hour-hand,
