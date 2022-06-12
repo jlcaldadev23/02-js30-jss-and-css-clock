@@ -9,33 +9,46 @@ html {
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-clock {
+  height: 100vh;
+  background: linear-gradient(
+      to top right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url(siddharth-shah-EXZipTH58ms-unsplash.jpg);
+  background-size: cover;
 }
 
 .clock-heading {
   font-size: 6.4rem;
   text-transform: uppercase;
   color: #fff;
+  align-self: center;
 }
 
-.section-clock {
+.clocks {
   display: grid;
-  height: 100vh;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   column-gap: 3.2rem;
   row-gap: 9.6rem;
-  text-align: center;
   padding: 0 4.8rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(siddharth-shah-EXZipTH58ms-unsplash.jpg);
-  background-size: cover;
 }
 
-.clock-heading {
+.clock-heading-box {
   grid-column: 1/-1;
+  padding: 2.4rem 0;
+  justify-self: center;
 }
+
+/* .clock-heading {
+
+} */
 
 .clock-tokyo,
 .clock-new-york,
@@ -46,12 +59,19 @@ body {
   justify-content: center;
 }
 
+.date {
+  font-size: 3.6rem;
+  color: #fff;
+  text-align: center;
+}
+
 .clock {
   width: 40rem;
   height: 40rem;
   border-radius: 50%;
-  background: linear-gradient(45deg, cadetblue, blueviolet);
+  background: linear-gradient(45deg, #e67e22, #c0392b);
   position: relative;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.85);
 }
 
 .clock::after {
@@ -71,6 +91,7 @@ body {
   font-size: 3.2rem;
   text-transform: uppercase;
   margin-bottom: 2.4rem;
+  font-weight: 400;
   color: #fff;
 }
 
@@ -90,14 +111,14 @@ body {
 .hour-hand {
   width: 33%;
   height: 1.8rem;
-  background-color: cadetblue;
+  background-color: #222;
   z-index: 1;
 }
 
 .minute-hand {
   width: 40%;
   height: 1.2rem;
-  background-color: blueviolet;
+  background-color: #333;
   z-index: 2;
 }
 

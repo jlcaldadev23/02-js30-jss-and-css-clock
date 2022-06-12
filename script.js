@@ -1,3 +1,12 @@
+// switch
+
+const UTCDate = new Date().getUTCDate();
+const UTCMonth = new Date().getUTCMonth() + 1;
+const UTCYear = new Date().getUTCFullYear();
+
+const dateText = document.querySelector(".date");
+dateText.textContent = ` ${UTCDate} / ${UTCMonth} / ${UTCYear}`;
+
 function setDate(countryClock, timeDiff) {
   const UTCSeconds = new Date().getUTCSeconds();
   const UTCMinutes = new Date().getUTCMinutes();
